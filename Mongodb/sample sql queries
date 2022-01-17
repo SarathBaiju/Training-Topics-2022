@@ -20,3 +20,18 @@ select * from Address;
 select s.Name, a.City, a.District
 from Students s
 inner join Address a on a.Id = s.AddressId
+
+
+--------------------------------------------------------
+schema changes
+
+alter table Students add BankAccountNo varchar(30)
+
+update Students 
+set BankAccountNo = 'HDFC001'
+where Id =2
+
+update Students 
+set BankAccountNo = 'SBI001'
+where Id =1
+--------------------------------------------------------
