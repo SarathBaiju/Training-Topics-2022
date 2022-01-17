@@ -1,0 +1,45 @@
+-------------------Insert some dummy documents---------------------------------
+
+db.Students.insertOne(
+   {
+     "id": 1,
+      "name": "sarath",
+      "address":[
+           { 
+               "id": 1, 
+               "city" : "Nedumangadu",
+               "district": "Trivandrum"
+            }       
+        
+       ]   
+   }
+)
+
+db.Students.insertMany(
+   [
+       {
+         "id": 2,
+          "name": "jerish",
+          "address":[
+               { 
+                   "id": 2, 
+                   "city" : "Chathanoor",
+                   "district": "Kollam"
+                }       
+            
+           ]   
+       },
+         {
+         "id": 3,
+          "name": "hari",
+          "address":[
+               { 
+                   "id": 3, 
+                   "city" : "Guruvayoor",
+                   "district": "Thrissur"
+                }       
+            
+           ]   
+       }
+   ]
+)

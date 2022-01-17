@@ -1,0 +1,22 @@
+create database TrainingDb;
+
+use TrainingDb
+
+create table Address(Id int primary key, City varchar(50), District varchar(30))
+
+create table Students(Id int primary key, Name varchar(30), AddressId int foreign key references Address(Id))
+
+insert into Address values(1, 'Nedumangadu', 'Trivandrum')
+insert into Address values(2, 'Chathanoor', 'Kollam')
+insert into Address values(3, 'Guruvayoor', 'Thrissur')
+
+insert into Students values (1, 'Sarath', 1)
+insert into Students values (2, 'Jerish', 2)
+insert into Students values (3, 'Hari', 3)
+
+select * from Students;
+select * from Address;
+
+select s.Name, a.City, a.District
+from Students s
+inner join Address a on a.Id = s.AddressId
